@@ -32,7 +32,7 @@ jobs:
 #     - run: npm test
 
     - name: zip file
-      run: zip -r hous.zip ./app.js ./scripts ./appspec.yml ./package.json ./package.json
+      run: zip -r hous.zip ./app.js ./scripts ./appspec.yml ./package.json ./package-lock.json
 
     - name: AWS configure credentials
       uses: aws-actions/configure-aws-credentials@v1
@@ -46,7 +46,7 @@ jobs:
 
     - name: deploy with AWS codeDeploy
       run: aws deploy create-deployment
-        --application-name hous-codedeploy
+        --application-name hanghaemini
         --deployment-config-name CodeDeployDefault.OneAtATime
         --deployment-group-name GROUP
-        --s3-location bucket=hous-build,bundleType=zip,key=deploy/hous.zip
+        --s3-location bucket=hanghaemini,bundleType=zip,key=deploy/hous.zip
