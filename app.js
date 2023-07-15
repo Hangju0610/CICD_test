@@ -1,5 +1,4 @@
 const express = require('express');
-const a = require('./');
 const app = express();
 
 app.get('/', (req, res) => {
