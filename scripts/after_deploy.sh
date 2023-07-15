@@ -5,4 +5,4 @@ cd $REPOSITORY
 
 sudo npm ci
 
-sudo npm start
+npm start

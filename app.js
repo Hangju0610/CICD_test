@@ -3,7 +3,7 @@ const a = require('./');
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send('제발 되라!');
+  res.send('되는거 맞지?');
 });
 
 app.listen(3000, (req, res) => {
